@@ -1,0 +1,30 @@
+/**
+ * /src/css/custom.css
+ * You can override the default Infima variables here.
+ * Note: this is not a complete list of --ifm- variables.
+ */
+
+:root {
+  --ifm-color-primary: #7f7ff0;
+  --ifm-color-primary-dark: rgb(114, 114, 216);
+  --ifm-color-primary-darker: rgb(108, 108, 204);
+  --ifm-color-primary-darkest: rgb(89, 89, 168);
+  --ifm-color-primary-light: rgb(146, 146, 242);
+  --ifm-color-primary-lighter: rgb(165, 165, 245);
+  --ifm-color-primary-lightest: rgb(191, 191, 248);
+}
+
+.channel {
+  display: inline-block;
+  margin: 1rem;
+}
+
+.channel-logo {
+  margin-bottom: 1rem;
+  width: 120px;
+}
+
+.anchor-embed {
+  min-height: 161px;
+  width: 100%;
+}
