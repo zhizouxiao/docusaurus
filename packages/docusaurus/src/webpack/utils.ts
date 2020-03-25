@@ -114,9 +114,9 @@ export function getBabelLoader(isServer: boolean, babelOptions?: {}): Loader {
                   loose: true,
                   corejs: '2',
                   // Do not transform modules to CJS
-                  modules: false,
+                  //modules: false,
                   // Exclude transforms that make all code slower
-                  exclude: ['transform-typeof-symbol'],
+                  //exclude: ['transform-typeof-symbol'],
                 },
               ],
           '@babel/react',
@@ -135,15 +135,20 @@ export function getBabelLoader(isServer: boolean, babelOptions?: {}): Loader {
               // See https://github.com/babel/babel/issues/10261
               version: require('@babel/runtime/package.json').version,
               regenerator: true,
-              useESModules: true,
+              useESModules: false,
               // Undocumented option that lets us encapsulate our runtime, ensuring
               // the correct version is used
               // https://github.com/babel/babel/blob/090c364a90fe73d36a30707fc612ce037bdbbb24/packages/babel-plugin-transform-runtime/src/index.js#L35-L42
               absoluteRuntime: absoluteRuntimePath,
             },
           ],
+
           // Adds syntax support for import()
           isServer ? 'dynamic-import-node' : '@babel/syntax-dynamic-import',
+          '@babel/plugin-proposal-class-properties',
+          '@babel/plugin-transform-modules-commonjs',
+          '@babel/plugin-transform-arrow-functions',
+          '@babel/plugin-transform-object-assign',
         ],
       },
       babelOptions,

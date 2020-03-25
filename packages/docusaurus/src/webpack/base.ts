@@ -24,6 +24,12 @@ export function excludeJS(modulePath: string) {
   if (modulePath.startsWith(clientDir)) {
     return false;
   }
+  if (
+    modulePath.indexOf('prismjs') >= 0 ||
+    modulePath.indexOf('react-loadable') >= 0
+  ) {
+    return false;
+  }
   // Don't transpile node_modules except any docusaurus npm package
   return (
     /node_modules/.test(modulePath) &&

@@ -37,6 +37,7 @@
     align-items: center;
     position: absolute;
     top: 0;
+    visibility: hidden;
     margin: 0 var(--ifm-navbar-padding-horizontal);
     height: var(--ifm-navbar-height);
     color: inherit !important;

@@ -24,7 +24,7 @@ const TOP_OFFSET = 100;
 function DocTOC({headings}) {
   useTOCHighlight(LINK_CLASS_NAME, ACTIVE_LINK_CLASS_NAME, TOP_OFFSET);
   return (
-    <div className="col col--3">
+    <div className={styles.tableOfContentsWidth}>
       <div className={styles.tableOfContents}>
         <Headings headings={headings} />
       </div>

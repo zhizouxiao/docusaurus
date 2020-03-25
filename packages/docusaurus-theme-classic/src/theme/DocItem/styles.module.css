@@ -28,6 +28,10 @@
   }
 }
 
+.tableOfContentsWidth {
+  max-height: 160px;
+}
+
 .tableOfContents {
   display: inherit;
   max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
